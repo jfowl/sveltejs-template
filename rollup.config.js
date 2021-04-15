@@ -6,6 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
 import css from "rollup-plugin-css-only";
+import gitInfo from "rollup-plugin-git-info";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -43,6 +44,7 @@ export default {
     file: "public/build/bundle.js",
   },
   plugins: [
+    gitInfo(),
     svelte({
       preprocess: sveltePreprocess({ sourceMap: true }),
       compilerOptions: {
@@ -67,6 +69,7 @@ export default {
     typescript({
       sourceMap: true,
       inlineSources: true,
+      resolveJsonModule: true,
     }),
 
     // In dev mode, call `npm run start` once

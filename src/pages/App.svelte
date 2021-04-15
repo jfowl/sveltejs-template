@@ -1,4 +1,5 @@
 <script lang="ts">
+  import pkg from "../../package.json";
 </script>
 
 <main>
@@ -9,5 +10,5 @@
   </p>
 </main>
 <footer>
-  <a href="./SOURCE_CODE_URL">Source Code</a>
+  <a href="./SOURCE_CODE_URL">Source Code</a> ({pkg.version})
 </footer>
