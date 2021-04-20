@@ -29,5 +29,11 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0"
+  },
+  "prettier": {
+    "svelteSortOrder": "options-styles-scripts-markup",
+    "svelteStrictMode": true,
+    "svelteBracketNewLine": false,
+    "svelteAllowShorthand": false
   }
 }
