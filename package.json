@@ -13,6 +13,7 @@
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@tsconfig/svelte": "^1.0.0",
+    "ghooks": "^2.0.4",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
     "rollup": "^2.3.4",
@@ -35,5 +36,10 @@
     "svelteStrictMode": true,
     "svelteBracketNewLine": false,
     "svelteAllowShorthand": false
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npx prettier --plugin-search-dir=. --ignore-unknown --loglevel warn --check ./src"
+    }
   }
 }
